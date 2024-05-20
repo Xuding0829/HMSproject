@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/sendRequestBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取请求" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="本次就医诊断结果"
+            android:textSize="23sp"
+            android:textColor="#FFFFFF"
+            android:background="#4E818E"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_diagnosis_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="诊断影像报告"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="5dp"/>
+
+        <ImageView
+            android:id="@+id/img_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ct2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/img_report"
+            android:layout_marginTop="20dp"
+            android:background="#4E818E"  />
+        <TextView
+            android:id="@+id/tv_diagnosis_lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="诊断化验单"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="5dp"/>
+
+        <ImageView
+            android:id="@+id/img_lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blood"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="8dp"
+            android:clickable="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/img_lab"
+            android:layout_marginTop="20dp"
+            android:background="#4E818E"  />
+        <TextView
+            android:id="@+id/tv_drug_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用药建议"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginStart="5dp"
+           />
+
+        <TableLayout
+            android:id="@+id/table_drug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="药名"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="用药时间"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="用药量"
+                    android:gravity="center"/>
+            </TableRow>
+
+        </TableLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/table_drug"
+            android:layout_marginTop="20dp"
+            android:background="#4E818E"  />
+        <TextView
+            android:id="@+id/tv_doctor_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="医师建议"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"/>
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+            android:id="@+id/tv_doctor_suggestion_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" android:textSize="16sp"
+            android:background="@drawable/text"
+                android:text="三餐规律，保证饮食均衡，戒烟戒酒。注意休息，避免劳累、剧烈运动。根据自身情况选择一些中等强度的体育锻炼（如慢跑、骑自行车等），避免剧烈运动。注意室内通风，保持合适的室内湿度（50%～60%），湿度太低容易诱发咳嗽，湿度太高容易滋生病菌。"
+                android:layout_marginTop="8dp"
+            android:padding="8dp"/>
+        </ScrollView>>
+
+
+    </LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HMSproject" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryGreen</item>
+        <item name="colorPrimaryDark">@color/primaryDarkGreen</item>
+        <item name="colorAccent">@color/accentGreen</item>
+        <item name="android:textColor">@color/primaryTextGreen</item>
+        <item name="android:textColorHint">@color/hintTextGreen</item>
+        <item name="android:windowBackground">@color/windowBackgroundGreen</item>
+    </style>
+
+    <style name="Theme.HMS" parent="Base.Theme.HMSproject" />
+
+    <color name="primaryGreen">#4CAF50</color>
+    <color name="primaryDarkGreen">#388E3C</color>
+    <color name="accentGreen">#8BC34A</color>
+    <color name="primaryTextGreen">#212121</color>
+    <color name="hintTextGreen">#727272</color>
+    <color name="windowBackgroundGreen">#F5F5F5</color>
+</resources>

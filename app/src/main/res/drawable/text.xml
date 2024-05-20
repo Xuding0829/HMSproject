@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#DCDADA" /> <!-- 内部填充颜色 -->
+            <corners android:radius="10dp" /> <!-- 圆角10dp -->
+            <stroke android:width="2dp" android:color="#008000" /> <!-- 边框宽度2dp，颜色绿色 -->
+        </shape>
+    </item>
+</selector>

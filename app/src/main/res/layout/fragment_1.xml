@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#2E7A2E" />
+    <LinearLayout
+        android:id="@+id/sliderScale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="挂号"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="排队就医"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="就医中"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="化验中"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取药中"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已完成"/>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="5"
+        app:trackHeight="13dp"
+        app:thumbRadius="17dp"
+
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/statusTextView"
+        android:background="#2E7A2E"  />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/basemessage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/basemassage"
+            tools:ignore="SpeakableTextPresentCheck"></ImageView>
+
+        <TextView
+            android:id="@+id/explanationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basemessage"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-144dp"
+            android:text="个人基本信息"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-41dp"
+            android:layout_toRightOf="@id/explanationText"
+            android:text="更改"
+            android:textSize="12sp"></Button>
+
+        <TextView
+            android:id="@+id/pills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText"
+            android:text="药物过敏：无"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/bloodpressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pills"
+            android:text="日常血压：130/80"
+            android:layout_marginStart="160dp"
+            tools:ignore="DuplicateIds"></TextView>
+
+        <TextView
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bloodpressure"
+            android:text="重大疾病史：无"
+            android:layout_marginStart="160dp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history"
+            android:text="长期服用药物：无"
+            android:layout_marginStart="160dp"
+
+            ></TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        >
+        <ImageView
+            android:id="@+id/wait"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/wait"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            ></ImageView>
+        <TextView
+            android:id="@+id/explanationText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wait"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-144dp"
+            android:text="当前排队情况"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/explanationText2"
+            android:text="当前排队区域：A楼2层外科"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/restnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area"
+            android:text="剩余排队人数：13 人"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/resttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restnumber"
+            android:text="剩余排队时间：30 min"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            ></TextView>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText2"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-41dp"
+            android:layout_toRightOf="@id/explanationText2"
+            android:text="提醒"
+            android:textSize="12sp"
+
+            ></Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        >
+        <ImageView
+            android:id="@+id/infusionbottle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/infusionbottle2"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            ></ImageView>
+        <TextView
+            android:id="@+id/explanationText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infusionbottle"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-144dp"
+            android:text="当前吊瓶情况"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/area2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/explanationText3"
+            android:text="当前吊瓶区域：A楼2层休息室"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area2"
+            android:text="剩余药品液体：10 %"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/resttime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rest"
+            android:text="剩余吊瓶时间：70 min"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            ></TextView>
+
+        <Button
+            android:id="@+id/diaoping"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText3"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-41dp"
+            android:layout_toRightOf="@id/explanationText3"
+            android:text="提醒"
+            android:textSize="12sp"
+
+            ></Button>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        >
+        <ImageView
+            android:id="@+id/temp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/temp"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            ></ImageView>
+        <TextView
+            android:id="@+id/explanationText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-144dp"
+            android:text="当前体征数据"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/temptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText4"
+            android:text="当前体温为：36.3℃"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="25dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/bloodpressure2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temptext"
+            android:text="当前血压为：125/80mmHg"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="25dp"
+            ></TextView>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explanationText4"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-41dp"
+            android:layout_toRightOf="@id/explanationText4"
+            android:text="报警"
+            android:textSize="12sp"
+
+            ></Button>
+
+    </RelativeLayout>
+</LinearLayout>

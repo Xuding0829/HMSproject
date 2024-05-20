@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/iv"
+        android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="商品名:"
+            android:textSize="15sp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:text="价格:"
+            android:textSize="15sp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/title"
+             />
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/price"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+
+            android:src="@drawable/sale2"></ImageView>
+
+        <ImageButton
+            android:id="@+id/btnDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+
+            android:layout_toRightOf="@+id/price"
+            android:background="@null"
+            android:contentDescription="商品详情"
+            android:src="@android:drawable/ic_menu_more" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="详情展开"
+   android:layout_marginTop="7dp"
+    android:layout_marginLeft="108dp"
+    ></TextView>
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/price"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="115dp"
+            android:text="购买"
+            android:textSize="15dp"
+            android:background="@drawable/btn_bg_orange"/>
+
+    </RelativeLayout>
+</RelativeLayout>
