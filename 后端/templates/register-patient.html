@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>注册</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <link href="https://www.jq22.com/jquery/bootstrap-4.2.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="static/css/style.default.css">
+</head>
+<body>
+    <div class="page login-page">
+        <div class="container d-flex align-items-center">
+          <div class="form-holder has-shadow">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="info d-flex align-items-center">
+                  <div class="content">
+                    <div class="logo">
+                      <h1>欢迎注册</h1>
+                    </div>
+                    <p>HMS管理系统</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 bg-white">
+                <div class="form d-flex align-items-center">
+                  <div class="content">
+                      <div class="form-group">
+                        <input id="register-phone" class="input-material" type="text" name="registerPhone" placeholder="请输入手机号码" >
+                                        <div class="invalid-feedback">
+                                              手机号格式有误
+                                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="register-password" class="input-material" type="password" name="registerPassword" placeholder="请输入密码"   >
+                          <div class="invalid-feedback">
+                                              密码必须在6~10位之间
+                                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="register-passwords" class="input-material" type="password" name="registerPasswords" placeholder="确认密码"   >
+                          <div class="invalid-feedback">
+                                              两次密码必须相同 且在6~10位之间
+                                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="register-name" class="input-material" type="text" name="name" placeholder="姓名"   >
+                          <div class="invalid-feedback">
+                                              请输入姓名
+                                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="register-realId_num" class="input-material" type="text" name="realId_num" placeholder="身份证号">
+                        <div class="invalid-feedback">
+                          身份证号格式有误
+                    </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="register-medecal_id" class="input-material" type="text" name="medecal_id" placeholder="医疗凭证卡号">
+                        <div class="invalid-feedback">
+                          请输入医疗凭证卡号
+                    </div>
+                      </div>
+                      <div class="form-group">
+                        <button id="regbtn" type="button" name="registerSubmit" class="btn btn-primary">注册</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+      <script src="https://www.jq22.com/jquery/bootstrap-4.2.1.js"></script>
+      <script src="static/js/register-patient.js"></script>
+  </body>
+</html>

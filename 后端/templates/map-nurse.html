@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/images/favicon.png">
+    <title>HMS医疗导航系统</title>
+    <link href="static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/pages/google-vector-map.css" rel="stylesheet">
+    <link href="static/css/colors/default-dark.css" id="theme" rel="stylesheet">
+    <link href="static/dist/style.css" rel="stylesheet" />
+    <link href="static/css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="fix-header card-no-border fix-sidebar">
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">HMS</p>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <b>
+                            <img src="static/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        </b>
+                        <span>
+                            <img src="static/assets/images/HMS.png" alt="homepage" class="dark-logo" width="88"
+                                height="44" />
+                        </span>
+                    </a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item hidden-xs-down search-box"> <a
+                                class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i
+                                    class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a
+                                    class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="#"><img
+                                    src="static/assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="logout" class="nav-link waves-effect waves-dark" style="color: black;">登出</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="/" aria-expanded="false"><i
+                                    class="mdi mdi-gauge"></i><span class="hide-menu">首页</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="pages-profile" aria-expanded="false"><i
+                                    class="mdi mdi-account-check"></i><span class="hide-menu">挂号处个人信息</span></a></li>
+
+                        <li> <a class="waves-effect waves-dark" href="map" aria-expanded="false"><i
+                                    class="mdi mdi-earth"></i><span class="hide-menu">科室</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="map-nurse" aria-expanded="false"><i
+                                    class="mdi mdi-table"></i><span class="hide-menu">输液</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="infusion-submit" aria-expanded="false"><i
+                                    class="mdi mdi-emoticon"></i><span class="hide-menu">点滴提交</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="fullscreenModalLabel">双键呼叫</h4>
+                        <button type="button" onclick="close_medicineList()" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center flex-column">
+                        <h1 style="background-color:lightyellow;text-align:center">患者：牛爷爷正在呼叫</h1><br/>
+                        <button type="button" class="btn btn-danger">查看位置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="container-fluid px-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        正在输液的患者
+                    </div>
+                    <div class="card-body">
+                        <table id="datatables" style="width: 100%; text-align:center;">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>位置</th>
+                                    <th>年龄</th>
+                                    <th>流速</th>
+                                    <th>剩余量</th>
+                                    <th>预计结束时间</th>
+                                    <th>目前药物</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-4">
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">Map</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" height="500px">
+                                <!--<h4 class="card-title">下一站</h4>-->
+
+                                <div class="ml-auto">
+                                </div>
+                                <!--
+                                    <div id="gmaps-simple" class="gmaps"><iframe src="https://www.amap.com/" width="100%" height="100%" frameborder="0" style="border:0" sandbox=""></iframe></div>
+                                -->
+                                <div id="graph-container" class="gmaps" height="100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                © HMS <a target="_blank" href="" title="HMS"></a>
+            </footer>
+        </div>
+    </div>
+    <script src="static/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="static/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="static/js/waves.js"></script>
+    <script src="static/js/sidebarmenu.js"></script>
+    <script src="static/js/custom.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="static/js/jquery.dataTables.min.js"></script>
+    <script src="https://momentjs.cn/downloads/moment.js"></script>
+    <script src="static/js/map/datatables-nurse.js"></script>
+    <script src="static/js/map/graph-nurse.js"></script>
+</body>
+
+</html>
